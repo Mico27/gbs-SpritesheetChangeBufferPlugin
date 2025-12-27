@@ -1,0 +1,127 @@
+{
+  "_resourceType": "trigger",
+  "id": "3452014b-c10f-4dba-a240-05b29da6dd9b",
+  "name": "NormalWarioTrigger",
+  "prefabId": "",
+  "x": 5,
+  "y": 11,
+  "symbol": "trigger_0",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_THREAD_STOP",
+            "args": {
+              "variable": "0"
+            },
+            "id": "b9530c39-8d61-4a10-a379-0c7a29c1e035"
+          }
+        ],
+        "false": []
+      },
+      "id": "cf1d5696-06ad-4e13-aabe-71811bf7e3d8"
+    },
+    {
+      "command": "EVENT_THREAD_START",
+      "args": {
+        "variable": "0",
+        "__scriptTabs": "true"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_LOOP_FOR",
+            "args": {
+              "variable": "L0",
+              "from": {
+                "type": "number",
+                "value": 0
+              },
+              "comparison": "<",
+              "to": {
+                "type": "number",
+                "value": 8
+              },
+              "operation": "+=",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_PLAYER_SET_SPRITE",
+                  "args": {
+                    "spriteSheetId": "7a0ac6fd-1350-42f3-a712-07286c0e8e63"
+                  },
+                  "id": "07722aa4-8320-4e73-8f6e-541198b02518"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.5
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "units": "frames"
+                  },
+                  "id": "1e7167e0-8302-4d7c-b746-29022d865c26"
+                },
+                {
+                  "command": "EVENT_PLAYER_SET_SPRITE",
+                  "args": {
+                    "spriteSheetId": "ef4d21a2-3155-4b90-9bba-4fefccbc65a0"
+                  },
+                  "id": "a3a3a235-c424-4099-85ab-cd27fe6425ad"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.5
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "units": "frames"
+                  },
+                  "id": "c0c8982f-1cc3-4582-ba07-7632c4564548"
+                }
+              ]
+            },
+            "id": "2a49691c-4d02-4fd9-acdc-afd3637a02fa"
+          }
+        ]
+      },
+      "id": "56735887-9ad0-43a6-a9e2-e9efa7a4a19a"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 0
+}

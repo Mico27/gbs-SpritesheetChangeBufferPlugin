@@ -1,0 +1,127 @@
+{
+  "_resourceType": "trigger",
+  "id": "7f13d2dc-c8c3-40dd-916e-764d110d2f76",
+  "name": "BullWarioTrigger",
+  "prefabId": "",
+  "x": 30,
+  "y": 5,
+  "symbol": "trigger_2",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_THREAD_STOP",
+            "args": {
+              "variable": "0"
+            },
+            "id": "16e97fa1-9e83-4ec6-87d8-1289fa7b5147"
+          }
+        ],
+        "false": []
+      },
+      "id": "d470b815-ab87-42aa-8652-dea7e2b0b643"
+    },
+    {
+      "command": "EVENT_THREAD_START",
+      "args": {
+        "variable": "0",
+        "__scriptTabs": "true"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_LOOP_FOR",
+            "args": {
+              "variable": "L0",
+              "from": {
+                "type": "number",
+                "value": 0
+              },
+              "comparison": "<",
+              "to": {
+                "type": "number",
+                "value": 8
+              },
+              "operation": "+=",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_PLAYER_SET_SPRITE",
+                  "args": {
+                    "spriteSheetId": "ef4d21a2-3155-4b90-9bba-4fefccbc65a0"
+                  },
+                  "id": "d9b448c4-96e8-49ea-bd44-d2024a20d0c9"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.5
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "units": "frames"
+                  },
+                  "id": "eaf73ae4-0d7e-4168-b3f6-fd91d94401e6"
+                },
+                {
+                  "command": "EVENT_PLAYER_SET_SPRITE",
+                  "args": {
+                    "spriteSheetId": "e2d2b376-482a-4111-b5d8-7b2cf60294ac"
+                  },
+                  "id": "10590ea2-0df2-4653-ae69-61c628ca81d5"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.5
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "units": "frames"
+                  },
+                  "id": "431dba71-ae0b-46f9-94ba-356ff1b9b7f3"
+                }
+              ]
+            },
+            "id": "47682256-9b0a-4dd4-a282-7779aac9f4d6"
+          }
+        ]
+      },
+      "id": "c9553591-391c-4c26-9c73-29ed05591112"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 2
+}

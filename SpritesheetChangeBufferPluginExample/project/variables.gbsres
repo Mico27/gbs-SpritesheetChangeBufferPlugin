@@ -1,0 +1,11 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "ThreadId",
+      "symbol": "var_threadid"
+    }
+  ],
+  "constants": []
+}
