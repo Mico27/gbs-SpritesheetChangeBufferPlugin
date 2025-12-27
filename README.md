@@ -10,10 +10,10 @@ This plugin create a buffer in the tileset VRAM to prevent the display of that v
 this however means that the reserved space in the tileset VRAM will be doubled for that actor.
 
 WARNING: this plugin modifies the following engine files:
-actor.c
-data_manager.c
-vm_actor.c
-gbs_types.h
+- actor.c
+- data_manager.c
+- vm_actor.c
+ -gbs_types.h
 
 Any other plugin that modifies any of these files will not be compatible with this plugin unless the files are manually merged.
 
