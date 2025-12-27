@@ -13,7 +13,7 @@ WARNING: this plugin modifies the following engine files:
 - actor.c
 - data_manager.c
 - vm_actor.c
- -gbs_types.h
+- gbs_types.h
 
 Any other plugin that modifies any of these files will not be compatible with this plugin unless the files are manually merged.
 
