@@ -18,7 +18,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_MetaTilePlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "E_F_M_Sce_Scr"
     },
     {
       "when": {
@@ -30,7 +30,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_MetaTilePlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "E_F_M_Sce_Scr"
     },
     {
       "when": {
@@ -41,7 +41,7 @@
           "Mico27/SceneStackExPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_MetaTilePlugin_SceneStackExPlugin"
+      "use": "E_F_M_Sce"
     },
     {
       "when": {
@@ -52,7 +52,7 @@
           "SceneStackExPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_MetaTilePlugin_SceneStackExPlugin"
+      "use": "E_F_M_Sce"
     },
     {
       "when": {
@@ -63,7 +63,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_MetaTilePlugin_ScreenScrollPlugin"
+      "use": "E_F_M_Scr"
     },
     {
       "when": {
@@ -74,7 +74,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_MetaTilePlugin_ScreenScrollPlugin"
+      "use": "E_F_M_Scr"
     },
     {
       "when": {
@@ -85,7 +85,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "E_F_Sce_Scr"
     },
     {
       "when": {
@@ -96,7 +96,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "E_F_Sce_Scr"
     },
     {
       "when": {
@@ -107,7 +107,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_MetaTilePlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "E_M_Sce_Scr"
     },
     {
       "when": {
@@ -118,7 +118,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_MetaTilePlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "E_M_Sce_Scr"
     },
     {
       "when": {
@@ -129,7 +129,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_MetaTilePlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "F_M_Sce_Scr"
     },
     {
       "when": {
@@ -140,7 +140,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_MetaTilePlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "F_M_Sce_Scr"
     },
     {
       "when": {
@@ -150,7 +150,7 @@
           "Mico27/MetaTilePlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_MetaTilePlugin"
+      "use": "E_F_M"
     },
     {
       "when": {
@@ -160,7 +160,7 @@
           "MetaTilePlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_MetaTilePlugin"
+      "use": "E_F_M"
     },
     {
       "when": {
@@ -170,7 +170,7 @@
           "Mico27/SceneStackExPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_SceneStackExPlugin"
+      "use": "E_F_Sce"
     },
     {
       "when": {
@@ -180,7 +180,7 @@
           "SceneStackExPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_SceneStackExPlugin"
+      "use": "E_F_Sce"
     },
     {
       "when": {
@@ -190,7 +190,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_ScreenScrollPlugin"
+      "use": "E_F_Scr"
     },
     {
       "when": {
@@ -200,7 +200,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin_ScreenScrollPlugin"
+      "use": "E_F_Scr"
     },
     {
       "when": {
@@ -210,7 +210,7 @@
           "Mico27/SceneStackExPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_MetaTilePlugin_SceneStackExPlugin"
+      "use": "E_M_Sce"
     },
     {
       "when": {
@@ -220,7 +220,7 @@
           "SceneStackExPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_MetaTilePlugin_SceneStackExPlugin"
+      "use": "E_M_Sce"
     },
     {
       "when": {
@@ -230,7 +230,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_MetaTilePlugin_ScreenScrollPlugin"
+      "use": "E_M_Scr"
     },
     {
       "when": {
@@ -240,7 +240,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_MetaTilePlugin_ScreenScrollPlugin"
+      "use": "E_M_Scr"
     },
     {
       "when": {
@@ -250,7 +250,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "E_Sce_Scr"
     },
     {
       "when": {
@@ -260,7 +260,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "E_Sce_Scr"
     },
     {
       "when": {
@@ -270,7 +270,7 @@
           "Mico27/SceneStackExPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_MetaTilePlugin_SceneStackExPlugin"
+      "use": "F_M_Sce"
     },
     {
       "when": {
@@ -280,7 +280,7 @@
           "SceneStackExPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_MetaTilePlugin_SceneStackExPlugin"
+      "use": "F_M_Sce"
     },
     {
       "when": {
@@ -290,7 +290,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_MetaTilePlugin_ScreenScrollPlugin"
+      "use": "F_M_Scr"
     },
     {
       "when": {
@@ -300,7 +300,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_MetaTilePlugin_ScreenScrollPlugin"
+      "use": "F_M_Scr"
     },
     {
       "when": {
@@ -310,7 +310,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "F_Sce_Scr"
     },
     {
       "when": {
@@ -320,7 +320,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "F_Sce_Scr"
     },
     {
       "when": {
@@ -330,7 +330,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "MetaTilePlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "M_Sce_Scr"
     },
     {
       "when": {
@@ -340,7 +340,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "MetaTilePlugin_SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "M_Sce_Scr"
     },
     {
       "when": {
@@ -349,7 +349,7 @@
           "Mico27/FadeStreetPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin"
+      "use": "E_F"
     },
     {
       "when": {
@@ -358,7 +358,7 @@
           "FadeStreetPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_FadeStreetPlugin"
+      "use": "E_F"
     },
     {
       "when": {
@@ -367,7 +367,7 @@
           "Mico27/MetaTilePlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_MetaTilePlugin"
+      "use": "E_M"
     },
     {
       "when": {
@@ -376,7 +376,7 @@
           "MetaTilePlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_MetaTilePlugin"
+      "use": "E_M"
     },
     {
       "when": {
@@ -385,7 +385,7 @@
           "Mico27/SceneStackExPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_SceneStackExPlugin"
+      "use": "E_Sce"
     },
     {
       "when": {
@@ -394,7 +394,7 @@
           "SceneStackExPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_SceneStackExPlugin"
+      "use": "E_Sce"
     },
     {
       "when": {
@@ -403,7 +403,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_ScreenScrollPlugin"
+      "use": "E_Scr"
     },
     {
       "when": {
@@ -412,7 +412,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin_ScreenScrollPlugin"
+      "use": "E_Scr"
     },
     {
       "when": {
@@ -421,7 +421,7 @@
           "Mico27/MetaTilePlugin"
         ]
       },
-      "use": "FadeStreetPlugin_MetaTilePlugin"
+      "use": "F_M"
     },
     {
       "when": {
@@ -430,7 +430,7 @@
           "MetaTilePlugin"
         ]
       },
-      "use": "FadeStreetPlugin_MetaTilePlugin"
+      "use": "F_M"
     },
     {
       "when": {
@@ -439,7 +439,7 @@
           "Mico27/SceneStackExPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_SceneStackExPlugin"
+      "use": "F_Sce"
     },
     {
       "when": {
@@ -448,7 +448,7 @@
           "SceneStackExPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_SceneStackExPlugin"
+      "use": "F_Sce"
     },
     {
       "when": {
@@ -457,7 +457,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_ScreenScrollPlugin"
+      "use": "F_Scr"
     },
     {
       "when": {
@@ -466,7 +466,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "FadeStreetPlugin_ScreenScrollPlugin"
+      "use": "F_Scr"
     },
     {
       "when": {
@@ -475,7 +475,7 @@
           "Mico27/SceneStackExPlugin"
         ]
       },
-      "use": "MetaTilePlugin_SceneStackExPlugin"
+      "use": "M_Sce"
     },
     {
       "when": {
@@ -484,7 +484,7 @@
           "SceneStackExPlugin"
         ]
       },
-      "use": "MetaTilePlugin_SceneStackExPlugin"
+      "use": "M_Sce"
     },
     {
       "when": {
@@ -493,7 +493,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "MetaTilePlugin_ScreenScrollPlugin"
+      "use": "M_Scr"
     },
     {
       "when": {
@@ -502,7 +502,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "MetaTilePlugin_ScreenScrollPlugin"
+      "use": "M_Scr"
     },
     {
       "when": {
@@ -511,7 +511,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "Sce_Scr"
     },
     {
       "when": {
@@ -520,7 +520,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "SceneStackExPlugin_ScreenScrollPlugin"
+      "use": "Sce_Scr"
     },
     {
       "when": {
@@ -528,7 +528,7 @@
           "Mico27/EditActorActiveIndexPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin"
+      "use": "E"
     },
     {
       "when": {
@@ -536,7 +536,7 @@
           "EditActorActiveIndexPlugin"
         ]
       },
-      "use": "EditActorActiveIndexPlugin"
+      "use": "E"
     },
     {
       "when": {
@@ -544,7 +544,7 @@
           "Mico27/FadeStreetPlugin"
         ]
       },
-      "use": "FadeStreetPlugin"
+      "use": "F"
     },
     {
       "when": {
@@ -552,7 +552,7 @@
           "FadeStreetPlugin"
         ]
       },
-      "use": "FadeStreetPlugin"
+      "use": "F"
     },
     {
       "when": {
@@ -560,7 +560,7 @@
           "Mico27/MetaTilePlugin"
         ]
       },
-      "use": "MetaTilePlugin"
+      "use": "M"
     },
     {
       "when": {
@@ -568,7 +568,7 @@
           "MetaTilePlugin"
         ]
       },
-      "use": "MetaTilePlugin"
+      "use": "M"
     },
     {
       "when": {
@@ -576,7 +576,7 @@
           "Mico27/SceneStackExPlugin"
         ]
       },
-      "use": "SceneStackExPlugin"
+      "use": "Sce"
     },
     {
       "when": {
@@ -584,7 +584,7 @@
           "SceneStackExPlugin"
         ]
       },
-      "use": "SceneStackExPlugin"
+      "use": "Sce"
     },
     {
       "when": {
@@ -592,7 +592,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "ScreenScrollPlugin"
+      "use": "Scr"
     },
     {
       "when": {
@@ -600,7 +600,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "ScreenScrollPlugin"
+      "use": "Scr"
     }
   ]
 }
