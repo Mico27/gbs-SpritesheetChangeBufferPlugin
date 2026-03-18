@@ -233,14 +233,14 @@ UBYTE load_scene(const scene_t * scene, UBYTE bank, UBYTE init_data) BANKED {
     if (scene_type != SCENE_TYPE_LOGO) {
         // Load player
         PLAYER.sprite = scn.player_sprite;
-		PLAYER.reserve_tiles = scn.reserve_tiles;
-		PLAYER.using_sprite_buffer = 0;
+        PLAYER.reserve_tiles = scn.reserve_tiles;
+        PLAYER.using_sprite_buffer = 0;
         UBYTE n_loaded = load_sprite(PLAYER.base_tile = 0, scn.player_sprite.ptr, scn.player_sprite.bank);
         allocated_sprite_tiles = (n_loaded > scn.reserve_tiles) ? n_loaded : scn.reserve_tiles;
-		if (scn.reserve_tiles){
-			//double allocated sprite tiles for buffer
-			allocated_sprite_tiles = allocated_sprite_tiles << 1;
-		}
+        if (scn.reserve_tiles){
+            //double allocated sprite tiles for buffer
+            allocated_sprite_tiles = allocated_sprite_tiles << 1;
+        }
         load_animations(scn.player_sprite.ptr, scn.player_sprite.bank, ANIM_SET_DEFAULT, PLAYER.animations);
         load_bounds(scn.player_sprite.ptr, scn.player_sprite.bank, &PLAYER.bounds);
     } else {
@@ -289,7 +289,7 @@ UBYTE load_scene(const scene_t * scene, UBYTE bank, UBYTE init_data) BANKED {
                 if (actor->reserve_tiles) {
                     // exclusive sprites allocated separately to avoid overwriting if modified
                     actor->base_tile = allocated_sprite_tiles;
-					actor->using_sprite_buffer = 0;
+                    actor->using_sprite_buffer = 0;
                     UBYTE n_loaded = load_sprite(allocated_sprite_tiles, actor->sprite.ptr, actor->sprite.bank);
                     allocated_sprite_tiles += (((n_loaded > actor->reserve_tiles) ? n_loaded : actor->reserve_tiles) << 1);
                 } else {

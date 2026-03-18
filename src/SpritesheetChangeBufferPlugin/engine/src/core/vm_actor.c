@@ -76,14 +76,14 @@ static UWORD check_collision_horizontal(UWORD start_x, UWORD start_y, rect16_t *
         tx2 = SUBPX_TO_TILE(end_pos + bounds->right);
         if (tx2 < tx1) {
             tx2 = image_tile_width;
-        }            
+        }
     }
     while (ty1 != ty2) {
         if (tile_col_test_range_x(tile_mask, ty1, tx1, tx2)) {
             return (start_x > end_pos) ?
-                   TILE_TO_SUBPX(tile_hit_x) - bounds->left + TILE_TO_SUBPX(1) : 
+                   TILE_TO_SUBPX(tile_hit_x) - bounds->left + TILE_TO_SUBPX(1) :
                    TILE_TO_SUBPX(tile_hit_x) - EXCLUSIVE_OFFSET(bounds->right);
-        }                
+        }
         ty1++;
     }
     return end_pos;
@@ -113,8 +113,8 @@ static UWORD check_collision_vertical(UWORD start_x, UWORD start_y, rect16_t *bo
     }
     while (tx1 != tx2) {
         if (tile_col_test_range_y(tile_mask, tx1, ty1, ty2)) {
-            return (start_y > end_pos) ? 
-                   TILE_TO_SUBPX(tile_hit_y) - bounds->top + TILE_TO_SUBPX(1) : 
+            return (start_y > end_pos) ?
+                   TILE_TO_SUBPX(tile_hit_y) - bounds->top + TILE_TO_SUBPX(1) :
                    TILE_TO_SUBPX(tile_hit_y) - EXCLUSIVE_OFFSET(bounds->bottom);
         }
         tx1++;
@@ -211,7 +211,7 @@ void vm_actor_move_to(SCRIPT_CTX * THIS, INT16 idx) OLDCALL BANKED {
         }
 
         THIS->PC -= (INSTRUCTION_SIZE + sizeof(idx));
-        return;        
+        return;
     }
 
     // Interrupt actor movement
@@ -270,7 +270,7 @@ void vm_actor_move_to(SCRIPT_CTX * THIS, INT16 idx) OLDCALL BANKED {
 
         // Check for actor collision
         actor_t *hit_actor;
-        if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) { 
+        if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) {
             actor->pos.y = hit_actor->pos.y +
                 (new_dir == DIR_UP
                     ? hit_actor->bounds.bottom - actor->bounds.top + 1
@@ -499,7 +499,7 @@ void vm_actor_set_spritesheet(SCRIPT_CTX * THIS, INT16 idx, UBYTE spritesheet_ba
     UBYTE * n_actor = VM_REF_TO_PTR(idx);
     actor_t * actor = actors + *n_actor;
     actor->using_sprite_buffer = !actor->using_sprite_buffer;
-	UBYTE base_tile = actor->base_tile + (actor->using_sprite_buffer ? actor->reserve_tiles: 0);
+    UBYTE base_tile = actor->base_tile + (actor->using_sprite_buffer ? actor->reserve_tiles: 0);
     load_sprite(base_tile, spritesheet, spritesheet_bank);
     actor->sprite.bank = spritesheet_bank;
     actor->sprite.ptr = (void *)spritesheet;
@@ -564,7 +564,7 @@ void vm_actor_set_spritesheet_by_ref(SCRIPT_CTX * THIS, INT16 idxA, INT16 idxB) 
     const spritesheet_t *spritesheet = params->DATA;
 
     actor->using_sprite_buffer = !actor->using_sprite_buffer;
-	UBYTE base_tile = actor->base_tile + (actor->using_sprite_buffer ? actor->reserve_tiles: 0);
+    UBYTE base_tile = actor->base_tile + (actor->using_sprite_buffer ? actor->reserve_tiles: 0);
     load_sprite(base_tile, spritesheet, spritesheet_bank);
     actor->sprite.bank = spritesheet_bank;
     actor->sprite.ptr = (void *)spritesheet;
@@ -650,7 +650,7 @@ void vm_actor_move_to_x(SCRIPT_CTX * THIS, INT16 idx, UBYTE attr) OLDCALL BANKED
 
     if (params->X == actor->pos.x) {
         // Already at destination
-        actor_set_anim_idle(actor);        
+        actor_set_anim_idle(actor);
         return;
     } else if (params->X < actor->pos.x) {
         // Moving left
@@ -706,7 +706,7 @@ void vm_actor_move_to_y(SCRIPT_CTX * THIS, INT16 idx, UBYTE attr) OLDCALL BANKED
 
     act_move_to_t * params = VM_REF_TO_PTR(idx);
     actor = actors + (UBYTE)(params->ID);
-    
+
 
     // Interrupt actor movement
     if (CHK_FLAG(actor->flags, ACTOR_FLAG_INTERRUPT)) {
@@ -717,15 +717,15 @@ void vm_actor_move_to_y(SCRIPT_CTX * THIS, INT16 idx, UBYTE attr) OLDCALL BANKED
 
     if (params->Y == actor->pos.y) {
         // Already at destination
-        actor_set_anim_idle(actor);        
+        actor_set_anim_idle(actor);
         return;
     } else if (params->Y < actor->pos.y) {
-        // Moving upwards 
+        // Moving upwards
         actor->pos.y -= actor->move_speed;
 
         // Check for actor collision
         actor_t *hit_actor;
-        if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) { 
+        if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) {
             actor->pos.y += actor->move_speed;
             params->X = actor->pos.x;
             actor_set_anim_idle(actor);
@@ -744,7 +744,7 @@ void vm_actor_move_to_y(SCRIPT_CTX * THIS, INT16 idx, UBYTE attr) OLDCALL BANKED
 
         // Check for actor collision
         actor_t *hit_actor;
-        if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) { 
+        if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) {
             actor->pos.y -= actor->move_speed;
             params->X = actor->pos.x;
             actor_set_anim_idle(actor);
@@ -824,12 +824,12 @@ void vm_actor_move_to_xy(SCRIPT_CTX * THIS, INT16 idx, UBYTE attr) OLDCALL BANKE
 
     if (!reached_y) {
         if (params->Y < actor->pos.y) {
-            // Moving upwards 
+            // Moving upwards
             actor->pos.y -= actor->move_speed;
 
             // Check for actor collision
             actor_t *hit_actor;
-            if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) { 
+            if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) {
                 actor->pos.y += actor->move_speed;
                 params->X = actor->pos.x;
                 reached_y = TRUE;
@@ -846,7 +846,7 @@ void vm_actor_move_to_xy(SCRIPT_CTX * THIS, INT16 idx, UBYTE attr) OLDCALL BANKE
 
             // Check for actor collision
             actor_t *hit_actor;
-            if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) { 
+            if (test_actors && (hit_actor = actor_overlapping_bb(&actor->bounds, &actor->pos, actor))) {
                 actor->pos.y -= actor->move_speed;
                 params->X = actor->pos.x;
                 reached_y = TRUE;
@@ -875,7 +875,7 @@ void vm_actor_move_to_set_dir_x(SCRIPT_CTX * THIS, INT16 idx) OLDCALL BANKED {
 
     act_move_to_t * params = VM_REF_TO_PTR(idx);
     actor = actors + (UBYTE)(params->ID);
-    
+
     // Interrupt actor movement
     if (CHK_FLAG(actor->flags, ACTOR_FLAG_INTERRUPT)) {
         return;
@@ -891,7 +891,7 @@ void vm_actor_move_to_set_dir_y(SCRIPT_CTX * THIS, INT16 idx) OLDCALL BANKED {
 
     act_move_to_t * params = VM_REF_TO_PTR(idx);
     actor = actors + (UBYTE)(params->ID);
-    
+
     // Interrupt actor movement
     if (CHK_FLAG(actor->flags, ACTOR_FLAG_INTERRUPT)) {
         return;
@@ -907,6 +907,6 @@ void vm_actor_set_anim_moving(SCRIPT_CTX * THIS, INT16 idx) OLDCALL BANKED {
 
     act_move_to_t * params = VM_REF_TO_PTR(idx);
     actor = actors + (UBYTE)(params->ID);
-    
+
     actor_set_anim(actor, actor->dir + N_DIRECTIONS);
 }
