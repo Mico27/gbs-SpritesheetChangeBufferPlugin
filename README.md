@@ -56,7 +56,7 @@ Because the new tiles were written into the slot that OAM is *not* currently rea
 ## Project Setup
 
 1. Copy the plugin into your GB Studio project's `plugins` folder.
-2. That is all — the feature is active automatically for any actor whose **Sprite** property has a non-zero **Reserve copy tiles** value set in the GB Studio sprite editor.
+2. That is all — the feature is active automatically for any actor whose reserved tiles are set when a **Set actor spritesheet** event is on an actor. The plugin automaticaly doubles that amount to be used as a buffer when the spritesheet changes.
 
 ---
 
