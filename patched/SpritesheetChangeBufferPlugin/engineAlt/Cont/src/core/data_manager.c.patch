@@ -2,19 +2,6 @@ Index: src\core\data_manager.c
 ===================================================================
 --- src\core\data_manager.c
 +++ src\core\data_manager.c
-@@ -60,10 +60,10 @@
-     scene_stack_ptr = scene_stack;
- }
- 
- void load_bkg_tileset(const tileset_t* tiles, UBYTE bank) BANKED {
--	#ifdef DISABLE_TILESET_LOAD_ON_TRANSITION
--        if (((!bank) && (!tiles)) || is_transitioning_scene) return;    
-+    #ifdef DISABLE_TILESET_LOAD_ON_TRANSITION
-+        if (((!bank) && (!tiles)) || is_transitioning_scene) return;
-     #else
-         if ((!bank) && (!tiles)) return;
-     #endif
-     UWORD n_tiles = ReadBankedUWORD(&(tiles->n_tiles), bank);
 @@ -245,10 +245,17 @@
              allocated_sprite_tiles = player_sprite_len;
          } else {
