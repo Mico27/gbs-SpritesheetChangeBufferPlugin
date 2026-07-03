@@ -22,6 +22,7 @@ https://github.com/user-attachments/assets/de925525-5b96-4b94-8fbd-7c280441bc4c
 2. [Project Setup](#project-setup)
 3. [Technicalities and Restrictions](#technicalities-and-restrictions)
 4. [Inner Workings](#inner-workings)
+5. [Memory Footprint](#memory-footprint)
 
 ---
 
@@ -157,3 +158,18 @@ allocated_hardware_sprites += move_metasprite(
 
 This is identical for both the player and all other actors. The toggle ensures that `move_metasprite` always uses the slot whose VRAM data was fully written in a previous frame, never the slot currently being overwritten.
 
+
+---
+
+## Memory Footprint
+
+Measured against the stock GB Studio **4.3.0-e1** engine (per-file SDCC compile with GB Studio's build flags, default engine settings). Values are the plugin's *delta* versus the stock engine; DMG build, with CGB noted where it differs. ROM cost lands in banked ROM (GB Studio's autobanker spreads it across switchable banks); using the plugin's events additionally compiles a few bytes of GBVM script per call into your project's script banks.
+
+| | Cost |
+|---|---|
+| WRAM | +21 bytes |
+| ROM | +321 bytes |
+
+- **WRAM:** 21 bytes — `actor_t` grows by one byte (`using_sprite_buffer`) × the default 21 actors. Projects that raise MAX_ACTORS pay 1 byte per extra actor.
+- **Engine WRAM headroom:** the stock GB Studio 4.3.0 engine leaves about **854 bytes** of WRAM free (usable engine WRAM is 7,776 bytes at 0xC0A0–0xDF00; the stock engine uses 6,922 bytes). With this plugin installed roughly **833 bytes** remain. This figure does not depend on how many global variables your project defines: the script memory array has a fixed size of VM_HEAP_SIZE + (VM_MAX_CONTEXTS × VM_CONTEXT_STACK_SIZE) words — 768 + 16 × 64 = 1,792 words (3,584 bytes) with stock engine settings.
+- **SRAM:** not used.
