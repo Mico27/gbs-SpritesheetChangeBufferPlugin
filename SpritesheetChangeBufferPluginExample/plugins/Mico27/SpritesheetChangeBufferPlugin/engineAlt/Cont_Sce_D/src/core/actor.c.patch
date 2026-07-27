@@ -1,0 +1,38 @@
+Index: src\core\actor.c
+===================================================================
+--- src\core\actor.c
++++ src\core\actor.c
+@@ -72,8 +72,9 @@
+     player_moving           = FALSE;
+     player_iframes          = 0;
+     player_collision_actor  = NULL;
+     emote_actor             = NULL;
++
+     memset(actors, 0, sizeof(actors));
+ }
+ 
+ void player_init(void) BANKED {
+@@ -225,12 +226,12 @@
+             continue;
+         }
+         SWITCH_ROM(actor->sprite.bank);
+         spritesheet_t *sprite = actor->sprite.ptr;
+-
++        UBYTE base_tile = actor->base_tile + (actor->using_sprite_buffer ? actor->reserve_tiles: 0);
+         allocated_hardware_sprites += move_metasprite(
+             *(sprite->metasprites + actor->frame),
+-            actor->base_tile,
++            base_tile,
+             allocated_hardware_sprites,
+             screen_x,
+             screen_y
+         );
+@@ -558,5 +559,6 @@
+     } else if (player_iframes != 0) {
+         player_iframes--;
+     }
+     player_collision_actor = NULL;
+-}
+\ No newline at end of file
++}
++

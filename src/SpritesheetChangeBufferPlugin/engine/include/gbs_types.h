@@ -11,6 +11,7 @@
 #include "bankdata.h"
 #include "parallax.h"
 #include "collision.h"
+#include "data/states_defines.h"
 
 #define COLLISION_GROUP_NONE 0x0
 #define COLLISION_GROUP_PLAYER 0x1

@@ -1,4 +1,4 @@
-#ifndef GBS_TYPES_H
+﻿#ifndef GBS_TYPES_H
 #define GBS_TYPES_H
 
 #include <gbdk/platform.h>
@@ -11,6 +11,7 @@
 #include "bankdata.h"
 #include "parallax.h"
 #include "collision.h"
+#include "data/states_defines.h"
 
 #define COLLISION_GROUP_NONE 0x0
 #define COLLISION_GROUP_PLAYER 0x1
@@ -60,12 +61,32 @@ typedef struct actor_t
     // Collisions
     uint8_t collision_group;
     uint8_t using_sprite_buffer;
+
     //Dynamic actor
     uint8_t actor_behavior_id;
     uint8_t actor_state;
-    int16_t actor_vel_x;
-    int16_t actor_vel_y;
-    uint8_t actor_linked_actor_idx;
+    int8_t actor_vel_x;
+    int8_t actor_vel_y;
+#ifdef DYNAMIC_ACTOR_ENABLE_PARENT
+    struct actor_t *actor_parent;
+    // prev_pos is only used by the "Apply all parents positions delta" parenting
+    // mode (DYNAMIC_ACTOR_PARENT_MODE == 2). The static and velocity modes drop
+    // it to save 4 bytes per actor. Kept in sync with DYNAMIC_ACTOR_USES_PREV_POS
+    // in dynamic_actor.h; the default (undefined) is delta.
+#if !defined(DYNAMIC_ACTOR_PARENT_MODE) || (DYNAMIC_ACTOR_PARENT_MODE == 2)
+    upoint16_t prev_pos;
+#endif
+#endif
+
+#ifdef DYNAMIC_ACTOR_ENABLE_MOVE_Z
+    uint16_t pos_z;
+    int8_t actor_vel_z;
+#ifdef DYNAMIC_ACTOR_ENABLE_PARENT
+#if !defined(DYNAMIC_ACTOR_PARENT_MODE) || (DYNAMIC_ACTOR_PARENT_MODE == 2)
+    uint16_t prev_pos_z;
+#endif
+#endif
+#endif
 
     // Linked list
     struct actor_t *next;
@@ -205,3 +226,5 @@ typedef struct palette_t {
 } palette_t;
 
 #endif
+
+
